@@ -9,10 +9,13 @@ describe("Pet", () => {
     });
     it("returns an object with an initial 'age' value of 0", () => {
         expect(new Pet("Sparky Buttons").age).toBe(0);
-    })
+    });
     it("returns an object with an initial 'hunger' value of 0", () => {
         expect(new Pet("This Guy").hunger).toBe(0);
-    })
+    });
+    it("returns an object with an initial 'fitness' value of 10", () => {
+        expect(new Pet("Mr. Sinister").fitness).toBe(10);
+    });
     it("has a growUp method that increases the 'age' value by 1", () => {
         const whiskeridoo = new Pet("Whiskeridoo");
         expect(whiskeridoo.age).toBe(0);
