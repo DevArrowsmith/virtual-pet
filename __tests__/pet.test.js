@@ -7,7 +7,7 @@ describe("Pet", () => {
     it("returns an object with a specified 'name' value", () => {
         expect(new Pet("Pompompur").name).toBe("Pompompur");
     });
-    it("Pet objects have an initial 'age' value of 0", () => {
+    it("returns an object with an initial 'age' value of 0", () => {
         expect(new Pet("Sparky Buttons").age).toBe(0);
     })
 });
