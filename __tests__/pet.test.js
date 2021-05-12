@@ -10,4 +10,13 @@ describe("Pet", () => {
     it("returns an object with an initial 'age' value of 0", () => {
         expect(new Pet("Sparky Buttons").age).toBe(0);
     })
+    it("has a growUp method that increases the 'age' value by 1", () => {
+        const whiskeridoo = new Pet("Whiskeridoo");
+        expect(whiskeridoo.age).toBe(0);
+        whiskeridoo.growUp();
+        expect(whiskeridoo.age).toBe(1);
+        whiskeridoo.growUp();
+        whiskeridoo.growUp();
+        expect(whiskeridoo.age).toBe(3);
+    })
 });
