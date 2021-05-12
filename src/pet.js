@@ -7,7 +7,7 @@ function Pet (name) {
 
 Pet.prototype = {
     growUp () {
-        this.age += 1;
+        this.age ++;
         this.fitness -= 3;
     }
 };
