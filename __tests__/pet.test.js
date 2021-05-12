@@ -37,4 +37,12 @@ describe("Pet", () => {
         fido.growUp();
         expect(fido.age).toBe(3);
     })
+    it("has a growUp method that decreases the 'fitness' value by 3", () => {
+        expect(fido.fitness).toBe(10);
+        fido.growUp();
+        expect(fido.fitness).toBe(7);
+        fido.growUp();
+        fido.growUp();
+        expect(fido.fitness).toBe(1);
+    })
 });
