@@ -1,5 +1,5 @@
-function Pet () {
-    
+function Pet (name) {
+
 };
 
 module.exports = Pet;
