@@ -40,6 +40,8 @@ Pet.prototype = {
             return "I need a walk!"
         } else if (this.hunger >= HUNGER_THRESHOLD) {
             return "I'm hungry!"
+        } else {
+            return "I feel great!"
         };
     }
 };
