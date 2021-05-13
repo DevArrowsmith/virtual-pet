@@ -36,14 +36,14 @@ describe("Pet", () => {
         fido.growUp();
         fido.growUp();
         expect(fido.age).toBe(3);
-    })
+    });
     it("has a growUp method that increases the 'hunger' value by 10", () => {
         expect(fido.hunger).toBe(0);
         fido.growUp();
         expect(fido.hunger).toBe(5);
         fido.growUp();
         expect(fido.hunger).toBe(10);
-    })
+    });
     it("has a growUp method that decreases the 'fitness' value by 3", () => {
         expect(fido.fitness).toBe(10);
         fido.growUp();
@@ -51,5 +51,12 @@ describe("Pet", () => {
         fido.growUp();
         fido.growUp();
         expect(fido.fitness).toBe(1);
-    })
+    });
+    it("has an exercise method that increases the 'fitness' value by 4", () => {
+        fido.growUp();
+        fido.growUp();
+        expect(fido.fitness).toBe(4);
+        fido.exercise();
+        expect(fido.fitness).toBe(8)
+    });
 });
