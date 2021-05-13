@@ -21,7 +21,9 @@ Pet.prototype = {
         this.fitness = Math.min(this.fitness + 4, MAX_FITNESS);
     },
     checkUp () {
-        if (this.fitness <= 3) {
+        if(this.fitness <= 3 && this.hunger >= 5) {
+            return "I'm hungry and I need a walk!"
+        } else if (this.fitness <= 3) {
             return "I need a walk!"
         } else if (this.hunger >= 5) {
             return "I'm hungry!"
