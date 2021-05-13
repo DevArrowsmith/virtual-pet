@@ -1,3 +1,5 @@
+const MAX_FITNESS = 10;
+
 function Pet (name) {
     this.name = name;
     this.age = 0;

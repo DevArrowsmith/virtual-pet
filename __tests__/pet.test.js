@@ -59,4 +59,12 @@ describe("Pet", () => {
         fido.exercise();
         expect(fido.fitness).toBe(8)
     });
+    it("has an exercise method that cannot increase the 'fitness' value beyond 10", () => {
+        fido.growUp();
+        expect(fido.fitness).toBe(7);
+        fido.exercise();
+        expect(fido.fitness).toBe(10)
+        fido.exercise();
+        expect(fido.fitness).toBe(10)
+    });
 });
