@@ -58,7 +58,7 @@ describe("Pet", () => {
         fido.feed();
         expect(fido.hunger).toBe(2);
     });
-    it("has a feed method that cannot decrease the 'hunger' value below 3", () => {
+    it("has a feed method that cannot decrease the 'hunger' value below 0", () => {
         fido.growUp();
         expect(fido.hunger).toBe(5);
         fido.feed();
