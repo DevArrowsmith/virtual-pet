@@ -76,7 +76,13 @@ describe("Pet", () => {
         fido.exercise();
         expect(fido.fitness).toBe(10)
     });
-    it("has a checkUp method that returns a string", () => {
-        expect(typeof fido.checkUp()).toBe("string");
-    })
+    it("has a checkUp method that returns the string 'I need a walk!' if fitness is 3 or lower.", () => {
+        fido.growUp();
+        fido.growUp();
+        expect(fido.fitness).toBe(4);
+        expect(fido.checkUp()).toBe(undefined);
+        fido.growUp();
+        expect(fido.fitness).toBe(1);
+        expect(fido.checkUp()).toBe("I need a walk!");
+    });
 });
