@@ -52,6 +52,12 @@ describe("Pet", () => {
         fido.growUp();
         expect(fido.fitness).toBe(1);
     });
+    it("has a feed method that decreases the 'hunger' value by 3", () => {
+        fido.growUp();
+        expect(fido.hunger).toBe(5);
+        fido.feed();
+        expect(fido.hunger).toBe(2);
+    });
     it("has an exercise method that increases the 'fitness' value by 4", () => {
         fido.growUp();
         fido.growUp();
