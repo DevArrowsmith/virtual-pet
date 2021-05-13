@@ -82,4 +82,7 @@ describe("Pet", () => {
         fido.exercise();
         expect(fido.fitness).toBe(10)
     });
+    it("has a checkUp method that returns a string", () => {
+        expect(typeof fido.checkUp()).toBe("string");
+    })
 });
