@@ -14,7 +14,7 @@ Pet.prototype = {
         this.fitness -= 3;
     },
     exercise () {
-        this.fitness += 4;
+        this.fitness = Math.min(this.fitness +4, MAX_FITNESS);
     }
 };
 
