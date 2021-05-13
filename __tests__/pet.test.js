@@ -92,4 +92,9 @@ describe("Pet", () => {
         fido.hunger = 9;
         expect(fido.checkUp()).toBe("I'm hungry!");
     });
+    it("has a checkUp method that returns the string 'I'm hungry and I need a walk!' if hunger is 5 or higher and fitness is 3 or lower.", () => {
+        fido.hunger = 5;
+        fido.fitness = 3;
+        expect(fido.checkUp()).toBe("I'm hungry and I need a walk!");        
+    });
 });
