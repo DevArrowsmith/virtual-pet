@@ -13,6 +13,9 @@ Pet.prototype = {
         this.hunger += 5;
         this.fitness -= 3;
     },
+    feed () {
+        this.hunger -= 3;
+    },
     exercise () {
         this.fitness = Math.min(this.fitness +4, MAX_FITNESS);
     }
