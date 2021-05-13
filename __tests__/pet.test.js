@@ -77,16 +77,14 @@ describe("Pet", () => {
         expect(fido.fitness).toBe(10)
     });
     it("has a checkUp method that returns the string 'I need a walk!' if fitness is 3 or lower.", () => {
-        fido.fitness = 4;
-        expect(fido.checkUp()).toBe(undefined);
+
         fido.fitness = 3;
         expect(fido.checkUp()).toBe("I need a walk!");
         fido.fitness = 1;
         expect(fido.checkUp()).toBe("I need a walk!");
     });
     it("has a checkUp method that returns the string 'I'm hungry!' if hunger is 5 or higher.", () => {
-        fido.hunger = 4;
-        expect(fido.checkUp()).toBe(undefined);
+
         fido.hunger = 5;
         expect(fido.checkUp()).toBe("I'm hungry!");
         fido.hunger = 9;
@@ -95,6 +93,15 @@ describe("Pet", () => {
     it("has a checkUp method that returns the string 'I'm hungry and I need a walk!' if hunger is 5 or higher and fitness is 3 or lower.", () => {
         fido.hunger = 5;
         fido.fitness = 3;
+        expect(fido.checkUp()).toBe("I'm hungry and I need a walk!")
+        fido.hunger = 9;
+        fido.fitness = 1;
         expect(fido.checkUp()).toBe("I'm hungry and I need a walk!");        
+    });
+    it("has a checkUp method that returns the string 'I feel great!' if hunger is 4 or lower and fitness is 4 or higher.", () => {
+        expect(fido.checkUp()).toBe("I feel great!")
+        fido.hunger = 4;
+        fido.fitness = 4;
+        expect(fido.checkUp()).toBe("I feel great!");        
     });
 });
