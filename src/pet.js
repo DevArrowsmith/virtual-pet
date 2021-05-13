@@ -25,7 +25,7 @@ Pet.prototype = {
             return "I need a walk!"
         } else if (this.hunger >= 5) {
             return "I'm hungry!"
-        } ;
+        };
     }
 };
 
