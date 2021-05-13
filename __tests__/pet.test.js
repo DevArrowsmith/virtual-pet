@@ -1,18 +1,12 @@
 const Pet = require("../src/pet");
 
-describe("Pet", () => {
+let fido;
 
-    beforeAll(() => {
-        let fido = {};
-    })
+describe("Pet", () => {
 
     beforeEach(() => {
         fido = new Pet("Fido");
     });
-
-    afterEach(() => {
-        fido = {};
-    })
 
     it("returns an object", () => {
         expect(new Pet("Pompompur")).toBeInstanceOf(Object);
