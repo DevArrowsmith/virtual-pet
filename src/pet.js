@@ -21,7 +21,9 @@ Pet.prototype = {
         this.fitness = Math.min(this.fitness + 4, MAX_FITNESS);
     },
     checkUp () {
-        return "Check-up";
+        if (this.fitness <= 3) {
+            return "I need a walk!"
+        };
     }
 };
 
