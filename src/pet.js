@@ -10,6 +10,9 @@ Pet.prototype = {
         this.age ++;
         this.hunger += 5;
         this.fitness -= 3;
+    },
+    exercise () {
+        this.fitness += 4;
     }
 };
 
