@@ -19,10 +19,12 @@ function Pet (name) {
     this.age = INITIAL_AGE;
     this.hunger = INITIAL_HUNGER;
     this.fitness = INITIAL_FITNESS;
-    this.isAlive = true;
 };
 
 Pet.prototype = {
+    get isAlive () {
+        return this.age < 30 && this.hunger <10 && this.fitness > 0;
+    },
     growUp () {
         this.age ++;
         this.hunger += AGING_HUNGER_INCREASE;
