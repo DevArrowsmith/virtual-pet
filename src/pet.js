@@ -19,6 +19,7 @@ function Pet (name) {
     this.age = INITIAL_AGE;
     this.hunger = INITIAL_HUNGER;
     this.fitness = INITIAL_FITNESS;
+    this.isAlive = true;
 };
 
 Pet.prototype = {
