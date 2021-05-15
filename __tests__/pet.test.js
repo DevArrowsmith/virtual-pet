@@ -104,4 +104,7 @@ describe("Pet", () => {
         fido.fitness = 4;
         expect(fido.checkUp()).toBe("I feel great!");        
     });
+    it("has an isAlive property with an initial value of true.", () => {
+        expect(fido.isAlive).toBe(true);
+    });
 });
