@@ -107,4 +107,10 @@ describe("Pet", () => {
     it("has an isAlive property with an initial value of true.", () => {
         expect(fido.isAlive).toBe(true);
     });
+    it("has an isAlive property that returns false when hunger is greater than 10.", () => {
+        fido.hunger = 9;
+        expect(fido.isAlive).toBe(true);
+        fido.hunger = 10;
+        expect(fido.isAlive).toBe(false);
+    });
 });
