@@ -113,4 +113,10 @@ describe("Pet", () => {
         fido.hunger = 10;
         expect(fido.isAlive).toBe(false);
     });
+    it("has an isAlive property that returns false when fitness is 0 or lower.", () => {
+        fido.fitness = 1;
+        expect(fido.isAlive).toBe(true);
+        fido.fitness = 0;
+        expect(fido.isAlive).toBe(false);
+    });
 });
