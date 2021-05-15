@@ -119,4 +119,10 @@ describe("Pet", () => {
         fido.fitness = 0;
         expect(fido.isAlive).toBe(false);
     });
+    it("has an isAlive property that returns false when age is 30 or above.", () => {
+        fido.age = 29;
+        expect(fido.isAlive).toBe(true);
+        fido.age = 30;
+        expect(fido.isAlive).toBe(false);
+    });
 });
