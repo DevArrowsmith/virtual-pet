@@ -26,6 +26,9 @@ Pet.prototype = {
         return this.age < 30 && this.hunger <10 && this.fitness > 0;
     },
     growUp () {
+        if (!this.isAlive) {
+            throw new Error("Your pet is no longer alive :(");
+        };
         this.age ++;
         this.hunger += AGING_HUNGER_INCREASE;
         this.fitness -= AGING_FITNESS_DECREASE;
