@@ -129,6 +129,9 @@ describe("Pet", () => {
         it("creates a new Pet object and adds it to the parent pet's children array", () => {
             expect(fido.children[0] instanceof Pet).toBe(true);
         });
+        it("creates a new Pet object with the specified name value", () => {
+            expect(fido.children[0].name).toBe("whiskeridoo");
+        });
         it("throws an error if isAlive is false", () => {
             fido.age = 30;
             expect(fido.isAlive).toBe(false);
