@@ -44,7 +44,7 @@ describe("Pet", () => {
         it("throws an error if isAlive is false", () => {
             fido.age = 30;
             expect(fido.isAlive).toBe(false);
-            expect(() => fido.growUp()).toThrow('Your pet is no longer alive :(');
+            expect(() => fido.growUp()).toThrow('Fido is no longer alive :(');
         });
     });
 
@@ -62,7 +62,7 @@ describe("Pet", () => {
         it("throws an error if isAlive is false", () => {
             fido.age = 30;
             expect(fido.isAlive).toBe(false);
-            expect(() => fido.feed()).toThrow('Your pet is no longer alive :(');
+            expect(() => fido.feed()).toThrow('Fido is no longer alive :(');
         });
     });
 
@@ -80,7 +80,7 @@ describe("Pet", () => {
         it("throws an error if isAlive is false", () => {
             fido.age = 30;
             expect(fido.isAlive).toBe(false);
-            expect(() => fido.exercise()).toThrow('Your pet is no longer alive :(');
+            expect(() => fido.exercise()).toThrow('Fido is no longer alive :(');
         });
     });
 
@@ -111,10 +111,10 @@ describe("Pet", () => {
             fido.fitness = 4;
             expect(fido.checkUp()).toBe("I feel great!");        
         });
-        it("returns the string 'Your pet is no longer alive :(' if isAlive is false", () => {
+        it("returns the string '{pet.name} is no longer alive :(' if isAlive is false", () => {
             fido.age = 30;
             expect(fido.isAlive).toBe(false);
-            expect(fido.checkUp()).toBe('Your pet is no longer alive :(');
+            expect(fido.checkUp()).toBe('Fido is no longer alive :(');
         });
     });
 
@@ -135,7 +135,7 @@ describe("Pet", () => {
         it("throws an error if isAlive is false", () => {
             fido.age = 30;
             expect(fido.isAlive).toBe(false);
-            expect(() => fido.haveChild()).toThrow('Your pet is no longer alive :(');
+            expect(() => fido.haveChild()).toThrow('Fido is no longer alive :(');
         });
     });
 

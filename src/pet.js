@@ -28,7 +28,7 @@ Pet.prototype = {
     },
     growUp () {
         if (!this.isAlive) {
-            throw new Error("Your pet is no longer alive :(");
+            throw new Error(`${this.name} is no longer alive :(`);
         };
         this.age ++;
         this.hunger += AGING_HUNGER_INCREASE;
@@ -36,19 +36,19 @@ Pet.prototype = {
     },
     feed () {
         if (!this.isAlive) {
-            throw new Error("Your pet is no longer alive :(");
+            throw new Error(`${this.name} is no longer alive :(`);
         };
         this.hunger = Math.max(this.hunger - FEED_HUNGER_DECREASE, MIN_HUNGER);
     },
     exercise () {
         if (!this.isAlive) {
-            throw new Error("Your pet is no longer alive :(");
+            throw new Error(`${this.name} is no longer alive :(`);
         };
         this.fitness = Math.min(this.fitness + EXERCISE_FITNESS_INCREASE, MAX_FITNESS);
     },
     checkUp () {
         if (!this.isAlive) {
-            return "Your pet is no longer alive :(";
+            return `${this.name} is no longer alive :(`;
         } else if (this.fitness <= FITNESS_THRESHOLD && this.hunger >= HUNGER_THRESHOLD) {
             return "I'm hungry and I need a walk!"
         } else if (this.fitness <= FITNESS_THRESHOLD) {
@@ -61,7 +61,7 @@ Pet.prototype = {
     },
     haveChild (childName) {
         if (!this.isAlive) {
-            throw new Error("Your pet is no longer alive :(");
+            throw new Error(`${this.name} is no longer alive :(`);
         };
         this.children.push(new Pet(`${childName}`));
     }
