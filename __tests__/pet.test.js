@@ -24,7 +24,6 @@ describe("Pet", () => {
 
     describe("Pet.growUp()", () => {
         it("increases the 'age' value by 1", () => {
-            console.log("Start of Age", fido.isAlive);
             expect(fido.age).toBe(0);
             fido.growUp();
             expect(fido.age).toBe(1);
