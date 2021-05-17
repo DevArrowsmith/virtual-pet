@@ -21,6 +21,9 @@ describe("Pet", () => {
     it("returns an object with an initial 'fitness' value of 10", () => {
         expect(fido.fitness).toBe(10);
     });
+    it("returns an object with an initial 'children' value of an empty array", () => {
+        expect(fido.children).toEqual([]);
+    });
 
     describe("Pet.growUp()", () => {
         it("increases the 'age' value by 1", () => {
