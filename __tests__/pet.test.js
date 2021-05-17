@@ -109,6 +109,11 @@ describe("Pet", () => {
             fido.fitness = 4;
             expect(fido.checkUp()).toBe("I feel great!");        
         });
+        it("returns the string 'Your pet is no longer alive :(' if isAlive is false", () => {
+            fido.age = 30;
+            expect(fido.isAlive).toBe(false);
+            expect(fido.checkUp()).toBe('Your pet is no longer alive :(');
+        });
     });
 
     describe("Pet.isAlive", () => {

@@ -46,7 +46,7 @@ Pet.prototype = {
         this.fitness = Math.min(this.fitness + EXERCISE_FITNESS_INCREASE, MAX_FITNESS);
     },
     checkUp () {
-        if(this.fitness <= FITNESS_THRESHOLD && this.hunger >= HUNGER_THRESHOLD) {
+        if (this.fitness <= FITNESS_THRESHOLD && this.hunger >= HUNGER_THRESHOLD) {
             return "I'm hungry and I need a walk!"
         } else if (this.fitness <= FITNESS_THRESHOLD) {
             return "I need a walk!"
