@@ -40,6 +40,9 @@ Pet.prototype = {
         this.hunger = Math.max(this.hunger - FEED_HUNGER_DECREASE, MIN_HUNGER);
     },
     exercise () {
+        if (!this.isAlive) {
+            throw new Error("Your pet is no longer alive :(");
+        };
         this.fitness = Math.min(this.fitness + EXERCISE_FITNESS_INCREASE, MAX_FITNESS);
     },
     checkUp () {
