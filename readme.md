@@ -41,7 +41,7 @@ The goal was the creation of a constructor function that returns a rudimentary v
 ### Starting a Family 🐈🐈🐈
 - The pet has a `children` property. This is initially an empty array `[]`.
 - The pet has a `haveChild` method which takes a string as an argument.
-- The `haveChild` method invokes the `Pet` constructor function, passing in the string, and returns the resulting `Pet` object instance to the parent pet's `children` array.
+- The `haveChild` method invokes the `Pet` constructor function, passing in the string, and pushes the resulting `Pet` object instance to the parent pet's `children` array.
 
 ---
 
