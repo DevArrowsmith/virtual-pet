@@ -63,7 +63,7 @@ Pet.prototype = {
         if (!this.isAlive) {
             throw new Error("Your pet is no longer alive :(");
         };
-        this.children.push(new Pet(`$childName`));
+        this.children.push(new Pet(`${childName}`));
     }
 };
 
