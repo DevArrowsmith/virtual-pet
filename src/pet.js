@@ -60,6 +60,9 @@ Pet.prototype = {
         };
     },
     haveChild (childName) {
+        if (!this.isAlive) {
+            throw new Error("Your pet is no longer alive :(");
+        };
         this.children.push(new Pet(`$childName`));
     }
 };
