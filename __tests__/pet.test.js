@@ -42,23 +42,18 @@ describe("Pet", () => {
         it("throws an error if isAlive is false", () => {
             fido.age = 30;
             expect(fido.isAlive).toBe(false);
-            expect(() => fido.growUp()).toThrow('Your pet is no longer alive :(')
+            expect(() => fido.growUp()).toThrow('Your pet is no longer alive :(');
         });
     });
 
     describe("Pet.feed()", () => {
         it("decreases the 'hunger' value by 3", () => {
-            fido.growUp();
-            expect(fido.hunger).toBe(5);
+            fido.hunger = 5;
             fido.feed();
             expect(fido.hunger).toBe(2);
         });
         it("cannot decrease the 'hunger' value below 0", () => {
-            fido.growUp();
-            expect(fido.hunger).toBe(5);
-            fido.feed();
-            fido.feed();
-            expect(fido.hunger).toBe(0);
+            fido.hunger = 2;
             fido.feed();
             expect(fido.hunger).toBe(0);
         });
@@ -66,17 +61,12 @@ describe("Pet", () => {
 
     describe("Pet.exercise()", () => {
         it("increases the 'fitness' value by 4", () => {
-            fido.growUp();
-            fido.growUp();
-            expect(fido.fitness).toBe(4);
+            fido.fitness = 4;
             fido.exercise();
             expect(fido.fitness).toBe(8)
         });
         it("cannot increase the 'fitness' value beyond 10", () => {
-            fido.growUp();
-            expect(fido.fitness).toBe(7);
-            fido.exercise();
-            expect(fido.fitness).toBe(10)
+            fido.fitness = 9;
             fido.exercise();
             expect(fido.fitness).toBe(10)
         });
