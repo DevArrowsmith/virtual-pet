@@ -120,8 +120,13 @@ describe("Pet", () => {
 
 
     describe("Pet.haveChild()", () => {
+        beforeEach(() => {
+            fido.haveChild("whiskeridoo");
+        });
+        afterEach(() => {
+            fido.children = [];
+        });
         it("creates a new Pet object and adds it to the parent pet's children array", () => {
-            fido.haveChild("whiskeridoo")
             expect(fido.children[0] instanceof Pet).toBe(true);
         });
         it("throws an error if isAlive is false", () => {
