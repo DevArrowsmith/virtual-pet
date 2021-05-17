@@ -57,6 +57,11 @@ describe("Pet", () => {
             fido.feed();
             expect(fido.hunger).toBe(0);
         });
+        it("throws an error if isAlive is false", () => {
+            fido.age = 30;
+            expect(fido.isAlive).toBe(false);
+            expect(() => fido.feed()).toThrow('Your pet is no longer alive :(');
+        });
     });
 
     describe("Pet.exercise()", () => {
