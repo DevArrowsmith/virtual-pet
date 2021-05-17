@@ -58,6 +58,9 @@ Pet.prototype = {
         } else {
             return "I feel great!"
         };
+    },
+    haveChild (childName) {
+        this.children.push(new Pet(`$childName`));
     }
 };
 
