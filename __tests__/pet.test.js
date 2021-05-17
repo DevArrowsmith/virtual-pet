@@ -124,6 +124,11 @@ describe("Pet", () => {
             fido.haveChild("whiskeridoo")
             expect(fido.children[0] instanceof Pet).toBe(true);
         });
+        it("throws an error if isAlive is false", () => {
+            fido.age = 30;
+            expect(fido.isAlive).toBe(false);
+            expect(() => fido.haveChild()).toThrow('Your pet is no longer alive :(');
+        });
     });
 
     describe("Pet.isAlive", () => {
