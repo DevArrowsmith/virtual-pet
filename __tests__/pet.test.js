@@ -75,6 +75,11 @@ describe("Pet", () => {
             fido.exercise();
             expect(fido.fitness).toBe(10)
         });
+        it("throws an error if isAlive is false", () => {
+            fido.age = 30;
+            expect(fido.isAlive).toBe(false);
+            expect(() => fido.exercise()).toThrow('Your pet is no longer alive :(');
+        });
     });
 
     describe("Pet.checkUp()", () => {
